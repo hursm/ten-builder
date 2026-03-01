@@ -42,3 +42,5 @@ CLAUDE.md 논쟁의 핵심은 **크기**가 아니라 **품질**입니다:
 1. [프로젝트 초기 설정](./playbooks/01-project-setup.md) — CLAUDE.md부터 첫 커밋까지
 2. [AI 코드 리뷰](./playbooks/02-code-review.md) — PR 리뷰를 Claude에게 맡기기
 3. [리팩토링 워크플로](./playbooks/03-refactoring.md) — 기존 코드를 안전하게 개선
+4. [AI 디버깅 워크플로](./playbooks/04-debugging.md) — 에러를 체계적으로 해결
+5. [MCP 서버 활용](./playbooks/05-mcp-tools.md) — 외부 도구 연결로 능력 확장
