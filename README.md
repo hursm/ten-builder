@@ -56,7 +56,7 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templat
 ```bash
 # 1. 레포 클론
 git clone https://github.com/ten-builder/ten-builder.git
-cd ten-builder/episodes/ep05-agent-teams-with-tmux
+cd ten-builder/episodes/ep5-agent-teams-with-tmux
 
 # 2. 미리보기
 ./run-agent-team.sh prompts --dry
