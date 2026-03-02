@@ -1,4 +1,4 @@
-# 플레이북 05: MCP 서버 활용
+# 가이드 08: MCP 서버 활용
 
 > Claude Code에 외부 도구를 연결해서 능력을 확장하는 방법
 
@@ -16,23 +16,48 @@ Claude Code에 MCP 서버를 연결하면:
 
 ## 설정 방법
 
-### 1. 프로젝트 단위 설정 (권장)
+### 1. CLI로 추가 (권장)
 
 ```bash
-# 프로젝트 루트에서
+# 프로젝트 단위 설정
 claude mcp add <서버이름> <명령어>
-```
+# → .claude/mcp-servers.json에 저장
 
-이 명령어는 `.claude/mcp-servers.json`에 서버를 등록합니다.
-
-### 2. 글로벌 설정
-
-```bash
-# 모든 프로젝트에서 사용
+# 모든 프로젝트에서 사용 (글로벌)
 claude mcp add --global <서버이름> <명령어>
+# → ~/.claude/mcp-servers.json에 저장
 ```
 
-글로벌 설정은 `~/.claude/mcp-servers.json`에 저장됩니다.
+### 2. settings.json 직접 편집
+
+설정 파일에서 직접 MCP 서버를 등록할 수도 있습니다.
+
+| 범위 | 파일 | 용도 |
+|------|------|------|
+| 전역 | `~/.claude.json` | 모든 프로젝트에 적용 |
+| 프로젝트 | `.claude/settings.json` | 해당 프로젝트만 |
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_your_token"
+      }
+    }
+  }
+}
+```
+
+특정 프로젝트에서 필요 없는 서버를 끄려면:
+
+```json
+{
+  "disabledMcpServers": ["filesystem", "supabase"]
+}
+```
 
 ## 자주 쓰는 MCP 서버
 
@@ -68,11 +93,23 @@ claude mcp add github npx -y @anthropic-ai/mcp-github
 # GITHUB_TOKEN 환경변수 필요
 ```
 
-**활용 예:**
+### Context7 (라이브러리 문서)
+
+최신 라이브러리 공식 문서를 실시간으로 조회합니다.
+
+```bash
+claude mcp add context7 npx -y @context7/mcp-server
 ```
-> 열린 PR 목록을 보여줘
-> #123 이슈의 내용을 확인하고 구현 계획을 세워줘
-> 최근 릴리즈 노트를 생성해줘
+
+### Vercel (배포)
+
+```json
+{
+  "vercel": {
+    "type": "http",
+    "url": "https://mcp.vercel.com"
+  }
+}
 ```
 
 ### Brave Search (웹 검색)
@@ -82,23 +119,11 @@ claude mcp add brave-search npx -y @anthropic-ai/mcp-brave-search
 # BRAVE_API_KEY 환경변수 필요
 ```
 
-**활용 예:**
-```
-> Next.js 15의 주요 변경사항을 검색해줘
-> 이 에러 메시지로 해결 방법을 찾아줘
-```
-
 ### Sentry (에러 트래킹)
 
 ```bash
 claude mcp add sentry npx -y @anthropic-ai/mcp-sentry
 # SENTRY_AUTH_TOKEN 환경변수 필요
-```
-
-**활용 예:**
-```
-> 최근 24시간 에러 트렌드를 보여줘
-> 가장 많이 발생하는 에러의 root cause를 분석해줘
 ```
 
 ## MCP 서버 관리
@@ -159,6 +184,24 @@ claude mcp add my-tools npx tsx my-mcp-server.ts
 
 > ⚠️ **주의:** 비밀번호나 토큰은 환경변수(`$DATABASE_URL`)로 참조하세요. JSON에 직접 넣지 마세요.
 
+## 주의사항
+
+| 항목 | 설명 |
+|------|------|
+| **10개 이하 유지** | 활성 MCP 서버마다 스키마가 컨텍스트에 주입 → 토큰 소비 |
+| **API 키 관리** | `.env` 또는 시스템 환경변수 사용 → JSON에 직접 넣지 마세요 |
+| **서드파티 검증** | 공식 MCP 서버가 아니면 소스코드 확인 후 사용 |
+| **HTTP vs stdio** | `type: "http"` = 원격 서버, `command` = 로컬 프로세스 |
+
+## 트러블슈팅
+
+| 증상 | 해결 |
+|------|------|
+| MCP 서버 연결 안 됨 | `npx -y <package>` 단독 실행으로 서버 테스트 |
+| 토큰 에러 | API 키 유효성 확인, 권한 범위 (scope) 체크 |
+| 느린 응답 | 불필요한 서버 비활성화, `disabledMcpServers` 활용 |
+| 컨텍스트 부족 | MCP 서버 수 줄이기 (5개 이하 권장) |
+
 ## 체크리스트
 
 - [ ] 프로젝트에 필요한 MCP 서버 식별
@@ -167,6 +210,6 @@ claude mcp add my-tools npx tsx my-mcp-server.ts
 - [ ] 팀 공유가 필요하면 `.claude/mcp-servers.json` 커밋
 - [ ] 민감한 정보는 환경변수로 관리
 
-## 이전 플레이북
+## 다음 단계
 
-← [04. AI 디버깅 워크플로](./04-debugging.md)
+→ [09. 보안 체크](./09-security.md)

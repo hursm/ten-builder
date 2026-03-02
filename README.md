@@ -22,9 +22,9 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
-| [`/claude-code`](./claude-code) | Claude Code 실전 플레이북 & 템플릿 | ⭐⭐⭐ |
-| [`/starter-kit`](./starter-kit) | AI 코딩 환경 30분 세팅 | ⭐ |
-| [`/episodes`](./episodes) | YouTube 에피소드별 전체 코드 | ⭐⭐ |
+| [`/guides`](./guides) | 01~10 단계별 실전 가이드 | ⭐⭐⭐ |
+| [`/templates`](./templates) | 복사해서 바로 쓰는 설정 파일 | ⭐ |
+| [`/examples`](./examples) | 프로젝트별 CLAUDE.md 예시 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
 
 ## Quick Start
@@ -33,7 +33,7 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 ```bash
 # CLAUDE.md 템플릿 복사
-curl -O https://raw.githubusercontent.com/tenbuilder/tenbuilder/main/claude-code/CLAUDE.md.template
+curl -O https://raw.githubusercontent.com/ten-builder/ten-builder/main/templates/CLAUDE.md.template
 
 # 프로젝트 루트에 배치
 mv CLAUDE.md.template CLAUDE.md
@@ -45,13 +45,27 @@ mv CLAUDE.md.template CLAUDE.md
 
 ```bash
 # macOS 원클릭 설정
-curl -sSL https://raw.githubusercontent.com/tenbuilder/tenbuilder/main/starter-kit/macos-setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templates/macos-setup.sh | bash
 ```
+
+## 가이드 목차
+
+| # | 가이드 | 설명 |
+|---|--------|------|
+| 01 | [환경 세팅](./guides/01-environment-setup.md) | AI 코딩 도구 설치 & 설정 |
+| 02 | [프로젝트 초기 설정](./guides/02-project-setup.md) | CLAUDE.md부터 첫 커밋까지 |
+| 03 | [일일 코딩 루틴](./guides/03-daily-workflow.md) | 매일 AI와 코딩하는 워크플로 |
+| 04 | [코드 리뷰](./guides/04-code-review.md) | AI 코드 리뷰 & PR 워크플로 |
+| 05 | [디버깅](./guides/05-debugging.md) | AI와 체계적으로 버그 잡기 |
+| 06 | [리팩토링](./guides/06-refactoring.md) | AI와 안전하게 코드 개선 |
+| 07 | [TDD](./guides/07-tdd.md) | AI와 테스트 주도 개발 |
+| 08 | [MCP 도구](./guides/08-mcp-tools.md) | 외부 도구 연결 (DB, GitHub 등) |
+| 09 | [보안](./guides/09-security.md) | AI 코딩 도구 보안 설정 |
+| 10 | [Hooks](./guides/10-hooks.md) | 자동 검사/포맷/알림 설정 |
 
 ## 이 레포는 어떻게 업데이트 되나요?
 
-- **매주** — 새로운 플레이북과 패턴 추가
-- **에피소드 공개 시** — 영상에서 사용한 전체 코드
+- **매주** — 새로운 가이드와 패턴 추가
 - **Release** — ⭐ Star 누르면 새 콘텐츠 추가 시 알림
 
 ## 더 알아보기
