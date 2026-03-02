@@ -23,7 +23,7 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
 | [`/episodes`](./episodes) | 영상별 코드 & 스크립트 | ⭐⭐ |
-| [`/guides`](./guides) | 01~11 단계별 실전 가이드 | ⭐⭐⭐ |
+| [`/guides`](./guides) | 1~11 단계별 실전 가이드 | ⭐⭐⭐ |
 | [`/templates`](./templates) | 복사해서 바로 쓰는 설정 파일 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 CLAUDE.md 예시 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
@@ -56,7 +56,7 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templat
 ```bash
 # 1. 레포 클론
 git clone https://github.com/ten-builder/ten-builder.git
-cd ten-builder/episodes/ep05-agent-teams-with-tmux
+cd ten-builder/episodes/ep5-agent-teams-with-tmux
 
 # 2. 미리보기
 ./run-agent-team.sh prompts --dry
@@ -73,15 +73,15 @@ cd ten-builder/episodes/ep05-agent-teams-with-tmux
 
 | # | 가이드 | 설명 |
 |---|--------|------|
-| 01 | [환경 세팅](./guides/01-environment-setup.md) | AI 코딩 도구 설치 & 설정 |
-| 02 | [프로젝트 초기 설정](./guides/02-project-setup.md) | CLAUDE.md부터 첫 커밋까지 |
-| 03 | [일일 코딩 루틴](./guides/03-daily-workflow.md) | 매일 AI와 코딩하는 워크플로 |
-| 04 | [코드 리뷰](./guides/04-code-review.md) | AI 코드 리뷰 & PR 워크플로 |
-| 05 | [디버깅](./guides/05-debugging.md) | AI와 체계적으로 버그 잡기 |
-| 06 | [리팩토링](./guides/06-refactoring.md) | AI와 안전하게 코드 개선 |
-| 07 | [TDD](./guides/07-tdd.md) | AI와 테스트 주도 개발 |
-| 08 | [MCP 도구](./guides/08-mcp-tools.md) | 외부 도구 연결 (DB, GitHub 등) |
-| 09 | [보안](./guides/09-security.md) | AI 코딩 도구 보안 설정 |
+| 1 | [환경 세팅](./guides/1-environment-setup.md) | AI 코딩 도구 설치 & 설정 |
+| 2 | [프로젝트 초기 설정](./guides/2-project-setup.md) | CLAUDE.md부터 첫 커밋까지 |
+| 3 | [일일 코딩 루틴](./guides/3-daily-workflow.md) | 매일 AI와 코딩하는 워크플로 |
+| 4 | [코드 리뷰](./guides/4-code-review.md) | AI 코드 리뷰 & PR 워크플로 |
+| 5 | [디버깅](./guides/5-debugging.md) | AI와 체계적으로 버그 잡기 |
+| 6 | [리팩토링](./guides/6-refactoring.md) | AI와 안전하게 코드 개선 |
+| 7 | [TDD](./guides/7-tdd.md) | AI와 테스트 주도 개발 |
+| 8 | [MCP 도구](./guides/8-mcp-tools.md) | 외부 도구 연결 (DB, GitHub 등) |
+| 9 | [보안](./guides/9-security.md) | AI 코딩 도구 보안 설정 |
 | 10 | [Hooks](./guides/10-hooks.md) | 자동 검사/포맷/알림 설정 |
 | 11 | [에이전트 팀](./guides/11-agent-teams.md) | AI 에이전트 5명으로 동시 빌딩 |
 
