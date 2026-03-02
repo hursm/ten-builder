@@ -22,6 +22,7 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
+| [`/episodes`](./episodes) | 영상별 코드 & 스크립트 | ⭐⭐ |
 | [`/guides`](./guides) | 01~11 단계별 실전 가이드 | ⭐⭐⭐ |
 | [`/templates`](./templates) | 복사해서 바로 쓰는 설정 파일 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 CLAUDE.md 예시 | ⭐⭐ |
@@ -55,13 +56,13 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templat
 ```bash
 # 1. 레포 클론
 git clone https://github.com/ten-builder/ten-builder.git
-cd ten-builder
+cd ten-builder/episodes/ep05-agent-teams-with-tmux
 
 # 2. 미리보기
-./templates/run-agent-team.sh templates/agent-team-example --dry
+./run-agent-team.sh prompts --dry
 
 # 3. 실행 (tmux + Claude Code 필요)
-./templates/run-agent-team.sh templates/agent-team-example
+./run-agent-team.sh prompts
 ```
 
 **자세한 가이드:** [에이전트 팀 가이드](./guides/11-agent-teams.md)
