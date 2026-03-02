@@ -22,7 +22,7 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
-| [`/guides`](./guides) | 01~10 단계별 실전 가이드 | ⭐⭐⭐ |
+| [`/guides`](./guides) | 01~11 단계별 실전 가이드 | ⭐⭐⭐ |
 | [`/templates`](./templates) | 복사해서 바로 쓰는 설정 파일 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 CLAUDE.md 예시 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
@@ -48,6 +48,26 @@ mv CLAUDE.md.template CLAUDE.md
 curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templates/macos-setup.sh | bash
 ```
 
+## 에이전트 팀
+
+> AI 에이전트 5명이 동시에 코딩합니다. tmux로 병렬 실행.
+
+```bash
+# 1. 레포 클론
+git clone https://github.com/ten-builder/ten-builder.git
+cd ten-builder
+
+# 2. 미리보기
+./templates/run-agent-team.sh templates/agent-team-example --dry
+
+# 3. 실행 (tmux + Claude Code 필요)
+./templates/run-agent-team.sh templates/agent-team-example
+```
+
+**자세한 가이드:** [에이전트 팀 가이드](./guides/11-agent-teams.md)
+
+📮 **영상에서 사용한 실제 프롬프트 5개는 뉴스레터에서:** [maily.so/tenbuilder](https://maily.so/tenbuilder)
+
 ## 가이드 목차
 
 | # | 가이드 | 설명 |
@@ -62,6 +82,7 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templat
 | 08 | [MCP 도구](./guides/08-mcp-tools.md) | 외부 도구 연결 (DB, GitHub 등) |
 | 09 | [보안](./guides/09-security.md) | AI 코딩 도구 보안 설정 |
 | 10 | [Hooks](./guides/10-hooks.md) | 자동 검사/포맷/알림 설정 |
+| 11 | [에이전트 팀](./guides/11-agent-teams.md) | AI 에이전트 5명으로 동시 빌딩 |
 
 ## 이 레포는 어떻게 업데이트 되나요?
 
@@ -72,8 +93,8 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/templat
 
 이 레포가 도움이 됐다면, 매주 보내는 AI 코딩 인사이트도 좋아할 거예요:
 
+- 에이전트 팀 실전 프롬프트 + 촬영 팁
 - 직접 써보고 검증한 AI 도구 리뷰
-- 실무에서 바로 적용 가능한 설정과 워크플로
 - 실패 사례와 트레이드오프
 
 **뉴스레터 구독:** [maily.so/tenbuilder](https://maily.so/tenbuilder)
