@@ -306,17 +306,15 @@ for i in "${!PROMPT_FILES[@]}"; do
 
   echo "  [$((i+1))/$AGENT_COUNT] Starting $name..."
 
-  # Start Claude Code in the pane
-  tmux send-keys -t "$pane" "$CLAUDE_CMD" Enter
-  sleep "$DELAY"
-
-  # Send the prompt (read from file)
+  # Launch Claude Code with the prompt file as initial message.
+  # Using "claude ... message" passes it as the first user turn,
+  # so the prompt arrives reliably regardless of startup time.
   tmux send-keys -t "$pane" \
-    "Read the file $prompt_file and execute all instructions in it." Enter
+    "$CLAUDE_CMD \"Read the file $prompt_file and execute all instructions in it.\"" Enter
 
-  # Small gap before next agent
+  # Gap between agent launches to avoid API rate limits
   if [[ $i -lt $((AGENT_COUNT - 1)) ]]; then
-    sleep 2
+    sleep "$DELAY"
   fi
 done
 
