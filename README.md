@@ -102,4 +102,10 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 
 ## License
 
-MIT
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+이 레포의 콘텐츠는 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 라이선스로 제공됩니다.
+
+- **학습/참고 목적 사용** — 자유롭게 가능
+- **수정/재배포** — 출처 표기 + 동일 라이선스 적용 시 가능
+- **상업적 사용** — 불가
