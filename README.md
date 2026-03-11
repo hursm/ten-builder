@@ -38,7 +38,7 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
-| [`/guides`](./guides) | 1~12 단계별 실전 가이드 | ⭐⭐⭐ |
+| [`/guides`](./guides) | 1~14 단계별 실전 가이드 | ⭐⭐⭐ |
 | [`/episodes`](./episodes) | 영상별 코드 & 스크립트 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 실전 예제 | ⭐⭐ |
@@ -104,6 +104,8 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | 10 | [Hooks](./guides/10-hooks.md) | 자동 검사/포맷/알림 설정 |
 | 11 | [에이전트 팀](./guides/11-agent-teams.md) | AI 에이전트 5명으로 동시 빌딩 |
 | 12 | [배포](./guides/12-deployment.md) | AI와 배포 파이프라인 구축 |
+| 13 | [하네스 엔지니어링](./guides/13-harness-engineering.md) | AI 에이전트 실행 환경 설계 |
+| 14 | [비용 최적화](./guides/14-cost-optimization.md) | AI 코딩 도구 비용 관리 전략 |
 
 ## 에피소드별 코드
 
@@ -114,6 +116,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | EP03 | AI 에이전트 A to Z | [`/episodes/EP03-ai-agent-az`](./episodes/EP03-ai-agent-az) |
 | EP04 | Claude Desktop MCP | [`/episodes/EP04-claude-desktop-mcp`](./episodes/EP04-claude-desktop-mcp) |
 | EP05 | 에이전트 팀즈 with tmux | [`/episodes/EP05-agent-teams-tmux`](./episodes/EP05-agent-teams-tmux) |
+| EP06 | Claude Code Hooks | [`/episodes/EP06-claude-code-hooks`](./episodes/EP06-claude-code-hooks) |
 
 ## 치트시트
 
@@ -126,6 +129,8 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [MCP 레퍼런스](./cheatsheets/mcp-quick-reference.md) | MCP 서버 빠른 참조 |
 | [토큰 최적화](./cheatsheets/token-optimization-cheatsheet.md) | 토큰 사용량 절약 팁 |
 | [Windsurf](./cheatsheets/windsurf-cheatsheet.md) | Windsurf AI IDE 가이드 |
+| [하네스 엔지니어링](./cheatsheets/harness-engineering-cheatsheet.md) | Model/Harness/Surfaces 구조 요약 |
+| [AI CLI 도구 비교](./cheatsheets/ai-cli-tools-comparison.md) | Claude Code vs Codex CLI vs Gemini CLI |
 
 ## 실전 예제
 
@@ -140,6 +145,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Go Microservice](./examples/go-microservice.md) | Go 마이크로서비스 예제 |
 | [Rust API](./examples/rust-api.md) | Rust API 예제 |
 | [Next.js SaaS](./examples/nextjs-saas.md) | SaaS 보일러플레이트 |
+| [Terraform + AI IaC](./examples/terraform-ai-iac) | Terraform AI 인프라 자동화 |
 | [CLAUDE.md 작성법](./examples/user-claudemd.md) | 사용자 CLAUDE.md 가이드 |
 
 ## 워크플로
@@ -151,6 +157,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Pre-commit AI 훅](./workflows/pre-commit-ai-hooks.md) | 커밋 전 AI 자동 검사 |
 | [GitHub Actions AI 리뷰](./workflows/github-actions-ai-review.md) | PR 자동 리뷰 워크플로 |
 | [모노레포 AI 워크플로](./workflows/monorepo-ai-workflow.md) | 모노레포 AI 개발 패턴 |
+| [AI 에이전트 감독](./workflows/ai-agent-supervision.md) | AI 에이전트 태스크 위임 & 검수 |
 
 ## 플레이북
 
@@ -163,6 +170,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [문서화](./claude-code/playbooks/09-documentation.md) | AI로 문서 자동 생성 & 관리 |
 | [코드 리뷰 심화](./claude-code/playbooks/10-code-review.md) | AI 코드 리뷰 고급 패턴 |
 | [보안 감사](./claude-code/playbooks/11-security-audit.md) | AI로 보안 취약점 점검 |
+| [컨텍스트 관리](./claude-code/playbooks/12-context-management.md) | AI 컨텍스트 윈도우 최적화 |
 
 ## 템플릿
 
