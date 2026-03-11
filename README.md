@@ -196,7 +196,7 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/skills/
 
 ## 이 레포는 어떻게 업데이트 되나요?
 
-- **매주** — 새로운 가이드와 패턴 추가
+- **상시** — 새로운 가이드와 치트시트, 패턴 등 추가
 - **Release** — ⭐ Star 누르면 새 콘텐츠 추가 시 알림
 
 ## 더 알아보기
