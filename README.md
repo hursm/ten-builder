@@ -108,7 +108,9 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | 14 | [비용 최적화](./guides/14-cost-optimization.md) | AI 코딩 도구 비용 관리 전략 |
 | 15 | [서브에이전트 오케스트레이션](./guides/15-subagent-orchestration.md) | 서브에이전트 분할 & 병렬 실행 전략 |
 | 16 | [AI 코딩 보안](./guides/16-ai-coding-security.md) | AI 코딩 보안 위험 & 방어 전략 |
+| 18 | [AI 출력물 검증](./guides/18-ai-output-verification.md) | AI 생성 코드 체계적 검증 방법 |
 | 19 | [태스크 분해](./guides/19-task-decomposition.md) | AI 에이전트 태스크 분해 기법 |
+| 20 | [에러 복구 전략](./guides/20-error-recovery.md) | AI 코딩 에러 감지 & 복구 전략 |
 | 21 | [팀 AI 도입](./guides/21-team-ai-adoption.md) | 팀 단위 AI 도구 도입 전략 |
 | 22 | [스펙 기반 AI 개발](./guides/22-spec-driven-ai-development.md) | 스펙 먼저 정의하고 AI에게 맡기기 |
 
@@ -141,6 +143,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Git + AI 워크플로우](./cheatsheets/git-ai-workflow-cheatsheet.md) | Git + AI 브랜치/커밋 패턴 |
 | [에이전트 모드 비교](./cheatsheets/agent-mode-comparison-cheatsheet.md) | AI 에이전트 모드 기능 비교 |
 | [Claude Code 커맨드](./cheatsheets/claude-code-commands-cheatsheet.md) | 커스텀 슬래시 커맨드 가이드 |
+| [MCP 생태계](./cheatsheets/mcp-ecosystem-cheatsheet.md) | MCP 서버 생태계 주요 도구 모음 |
 | [에이전틱 IDE 비교](./cheatsheets/agentic-ide-comparison-cheatsheet.md) | Kiro vs Cursor vs Claude Code 비교 |
 
 ## 실전 예제
@@ -159,6 +162,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Next.js SaaS](./examples/nextjs-saas.md) | SaaS 보일러플레이트 |
 | [Terraform + AI IaC](./examples/terraform-ai-iac) | Terraform AI 인프라 자동화 |
 | [Go Microservice + AI](./examples/go-microservice-ai) | Go 마이크로서비스 AI 개발 |
+| [React Native + AI](./examples/react-native-ai) | React Native 모바일 앱 AI 개발 |
 | [GraphQL + AI API](./examples/graphql-ai-api) | GraphQL API AI 개발 |
 | [CLAUDE.md 작성법](./examples/user-claudemd.md) | 사용자 CLAUDE.md 가이드 |
 
@@ -174,6 +178,8 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [AI 에이전트 감독](./workflows/ai-agent-supervision.md) | AI 에이전트 태스크 위임 & 검수 |
 | [AI 테스트 강화](./workflows/ai-test-augmentation.md) | AI로 테스트 스위트 강화 & CI 통합 |
 | [AI 세션 메모리 관리](./workflows/ai-session-memory-management.md) | AI 세션 간 컨텍스트 & 지식 관리 |
+| [AI DB 마이그레이션](./workflows/ai-database-migration.md) | AI와 안전한 DB 스키마 마이그레이션 |
+| [AI 기술 부채 해소](./workflows/ai-tech-debt-reduction.md) | AI로 기술 부채 식별 & 점진적 개선 |
 | [AI 에이전트 파이프라인](./workflows/ai-agent-pipeline.md) | 멀티 에이전트 코드→테스트→배포 파이프라인 |
 
 ## 플레이북
