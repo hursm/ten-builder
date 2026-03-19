@@ -18,27 +18,33 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 ---
 
-## 목차
+## 레포 구조
 
-- [무엇이 있나요?](#무엇이-있나요)
-- [Quick Start](#quick-start)
-- [에이전트 팀](#에이전트-팀)
-- [가이드 목차](#가이드-목차)
-- [에피소드별 코드](#에피소드별-코드)
-- [치트시트](#치트시트)
-- [실전 예제](#실전-예제)
-- [워크플로](#워크플로)
-- [플레이북](#플레이북)
-- [템플릿](#템플릿)
-- [스킬](#스킬)
+```mermaid
+flowchart TD
+    R["ten-builder"] --> G["guides/\n24개 단계별 가이드\n+ 주제별 가이드"]
+    R --> E["episodes/\n8개 영상 코드"]
+    R --> C["cheatsheets/\n16개 원페이저"]
+    R --> EX["examples/\n16개 실전 예제"]
+    R --> W["workflows/\n13개 자동화 워크플로"]
+    R --> P["claude-code/playbooks/\n13개 심화 플레이북"]
+    R --> T["templates/\n설정 파일 & 스크립트"]
+    R --> S["skills/\n3개 Claude Code 스킬"]
 
----
-
-## 무엇이 있나요?
+    style R fill:#1e293b,stroke:#475569,color:#e2e8f0
+    style G fill:#14532d,stroke:#166534,color:#bbf7d0
+    style E fill:#7c2d12,stroke:#9a3412,color:#fed7aa
+    style C fill:#1e3a5f,stroke:#2563eb,color:#bfdbfe
+    style EX fill:#4a1d96,stroke:#6d28d9,color:#ddd6fe
+    style W fill:#713f12,stroke:#a16207,color:#fef08a
+    style P fill:#581c87,stroke:#7e22ce,color:#e9d5ff
+    style T fill:#1e293b,stroke:#475569,color:#e2e8f0
+    style S fill:#1e293b,stroke:#475569,color:#e2e8f0
+```
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
-| [`/guides`](./guides) | 1~22 단계별 실전 가이드 | ⭐⭐⭐ |
+| [`/guides`](./guides) | 1~24 단계별 + 주제별 실전 가이드 | ⭐⭐⭐ |
 | [`/episodes`](./episodes) | 영상별 코드 & 스크립트 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 실전 예제 | ⭐⭐ |
@@ -46,6 +52,56 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 | [`/claude-code`](./claude-code) | 플레이북 & 심화 패턴 | ⭐⭐⭐ |
 | [`/templates`](./templates) | 복사해서 바로 쓰는 설정 파일 | ⭐ |
 | [`/skills`](./skills) | Claude Code 학습 스킬 (퀴즈 + 노트) | ⭐⭐ |
+
+---
+
+## 학습 로드맵
+
+```mermaid
+flowchart LR
+    subgraph 입문
+        A1["1. 환경 세팅"] --> A2["2. 프로젝트 설정"]
+        A2 --> A3["3. 일일 루틴"]
+    end
+
+    subgraph 기본기
+        B1["4. 코드 리뷰"] --> B2["5. 디버깅"]
+        B2 --> B3["6. 리팩토링"]
+        B3 --> B4["7. TDD"]
+    end
+
+    subgraph 확장
+        C1["8. MCP 도구"] --> C2["10. Hooks"]
+        C2 --> C3["11. 에이전트 팀"]
+        C3 --> C4["12. 배포"]
+    end
+
+    subgraph 심화
+        D1["13. 하네스 엔지니어링"] --> D2["15. 서브에이전트"]
+        D2 --> D3["16. 보안"]
+        D3 --> D4["22. 스펙 기반 개발"]
+    end
+
+    입문 --> 기본기 --> 확장 --> 심화
+
+    style A1 fill:#14532d,stroke:#166534,color:#bbf7d0
+    style A2 fill:#14532d,stroke:#166534,color:#bbf7d0
+    style A3 fill:#14532d,stroke:#166534,color:#bbf7d0
+    style B1 fill:#1e3a5f,stroke:#2563eb,color:#bfdbfe
+    style B2 fill:#1e3a5f,stroke:#2563eb,color:#bfdbfe
+    style B3 fill:#1e3a5f,stroke:#2563eb,color:#bfdbfe
+    style B4 fill:#1e3a5f,stroke:#2563eb,color:#bfdbfe
+    style C1 fill:#713f12,stroke:#a16207,color:#fef08a
+    style C2 fill:#713f12,stroke:#a16207,color:#fef08a
+    style C3 fill:#713f12,stroke:#a16207,color:#fef08a
+    style C4 fill:#713f12,stroke:#a16207,color:#fef08a
+    style D1 fill:#581c87,stroke:#7e22ce,color:#e9d5ff
+    style D2 fill:#581c87,stroke:#7e22ce,color:#e9d5ff
+    style D3 fill:#581c87,stroke:#7e22ce,color:#e9d5ff
+    style D4 fill:#581c87,stroke:#7e22ce,color:#e9d5ff
+```
+
+---
 
 ## Quick Start
 
@@ -88,7 +144,11 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 
 📮 **영상에서 사용한 실제 프롬프트 5개는 뉴스레터에서:** [maily.so/tenbuilder](https://maily.so/tenbuilder)
 
+---
+
 ## 가이드 목차
+
+### 단계별 가이드
 
 | # | 가이드 | 설명 |
 |---|--------|------|
@@ -108,11 +168,14 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | 14 | [비용 최적화](./guides/14-cost-optimization.md) | AI 코딩 도구 비용 관리 전략 |
 | 15 | [서브에이전트 오케스트레이션](./guides/15-subagent-orchestration.md) | 서브에이전트 분할 & 병렬 실행 전략 |
 | 16 | [AI 코딩 보안](./guides/16-ai-coding-security.md) | AI 코딩 보안 위험 & 방어 전략 |
+| 17 | [AI 페어 프로그래밍](./guides/17-ai-pair-programming.md) | AI와 효과적인 페어 프로그래밍 |
 | 18 | [AI 출력물 검증](./guides/18-ai-output-verification.md) | AI 생성 코드 체계적 검증 방법 |
 | 19 | [태스크 분해](./guides/19-task-decomposition.md) | AI 에이전트 태스크 분해 기법 |
 | 20 | [에러 복구 전략](./guides/20-error-recovery.md) | AI 코딩 에러 감지 & 복구 전략 |
 | 21 | [팀 AI 도입](./guides/21-team-ai-adoption.md) | 팀 단위 AI 도구 도입 전략 |
 | 22 | [스펙 기반 AI 개발](./guides/22-spec-driven-ai-development.md) | 스펙 먼저 정의하고 AI에게 맡기기 |
+| 23 | [AI 테스팅 전략](./guides/23-ai-testing-strategy.md) | AI와 테스트 전략 수립 & 자동화 |
+| 24 | [프롬프트 캐싱 최적화](./guides/24-prompt-caching-optimization.md) | 프롬프트 캐싱으로 비용 & 속도 개선 |
 
 ### 주제별 가이드
 
@@ -131,6 +194,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | EP05 | 에이전트 팀즈 with tmux | [`/episodes/EP05-agent-teams-tmux`](./episodes/EP05-agent-teams-tmux) |
 | EP06 | Claude Code Hooks | [`/episodes/EP06-claude-code-hooks`](./episodes/EP06-claude-code-hooks) |
 | EP07 | AI 자동화 봇 | [`/episodes/EP07-ai-automation-bot`](./episodes/EP07-ai-automation-bot) |
+| EP08 | OpenAI Codex 리뷰 | [`/episodes/EP08-openai-codex-review`](./episodes/EP08-openai-codex-review) |
 
 ## 치트시트
 
@@ -140,17 +204,18 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [에이전틱 코딩](./cheatsheets/agentic-coding-cheatsheet.md) | 에이전트 기반 코딩 패턴 |
 | [프롬프트 엔지니어링](./cheatsheets/prompt-engineering-cheatsheet.md) | 효과적인 프롬프트 작성법 |
 | [Claude Code Hooks](./cheatsheets/claude-code-hooks-cheatsheet.md) | Hooks 설정 & 패턴 |
-| [MCP 레퍼런스](./cheatsheets/mcp-quick-reference.md) | MCP 서버 빠른 참조 |
-| [토큰 최적화](./cheatsheets/token-optimization-cheatsheet.md) | 토큰 사용량 절약 팁 |
-| [Windsurf](./cheatsheets/windsurf-cheatsheet.md) | Windsurf AI IDE 가이드 |
-| [하네스 엔지니어링](./cheatsheets/harness-engineering-cheatsheet.md) | Model/Harness/Surfaces 구조 요약 |
-| [AI CLI 도구 비교](./cheatsheets/ai-cli-tools-comparison.md) | Claude Code vs Codex CLI vs Gemini CLI |
-| [서브에이전트 오케스트레이션](./cheatsheets/subagent-orchestration-cheatsheet.md) | 서브에이전트 분할 & 위임 패턴 |
-| [Git + AI 워크플로우](./cheatsheets/git-ai-workflow-cheatsheet.md) | Git + AI 브랜치/커밋 패턴 |
-| [에이전트 모드 비교](./cheatsheets/agent-mode-comparison-cheatsheet.md) | AI 에이전트 모드 기능 비교 |
 | [Claude Code 커맨드](./cheatsheets/claude-code-commands-cheatsheet.md) | 커스텀 슬래시 커맨드 가이드 |
+| [MCP 레퍼런스](./cheatsheets/mcp-quick-reference.md) | MCP 서버 빠른 참조 |
 | [MCP 생태계](./cheatsheets/mcp-ecosystem-cheatsheet.md) | MCP 서버 생태계 주요 도구 모음 |
-| [에이전틱 IDE 비교](./cheatsheets/agentic-ide-comparison-cheatsheet.md) | Kiro vs Cursor vs Claude Code 비교 |
+| [MCP 컨텍스트 최적화](./cheatsheets/mcp-context-optimization-cheatsheet.md) | MCP 컨텍스트 윈도우 활용 전략 |
+| [토큰 최적화](./cheatsheets/token-optimization-cheatsheet.md) | 토큰 사용량 절약 팁 |
+| [AI 모델 라우팅](./cheatsheets/ai-model-routing-cheatsheet.md) | AI 모델별 최적 라우팅 전략 |
+| [하네스 엔지니어링](./cheatsheets/harness-engineering-cheatsheet.md) | Model/Harness/Surfaces 구조 요약 |
+| [서브에이전트 오케스트레이션](./cheatsheets/subagent-orchestration-cheatsheet.md) | 서브에이전트 분할 & 위임 패턴 |
+| [에이전트 모드 비교](./cheatsheets/agent-mode-comparison-cheatsheet.md) | AI 에이전트 모드 기능 비교 |
+| [AI CLI 도구 비교](./cheatsheets/ai-cli-tools-comparison.md) | Claude Code vs Codex CLI vs Gemini CLI |
+| [Git + AI 워크플로우](./cheatsheets/git-ai-workflow-cheatsheet.md) | Git + AI 브랜치/커밋 패턴 |
+| [Windsurf](./cheatsheets/windsurf-cheatsheet.md) | Windsurf AI IDE 가이드 |
 
 ## 실전 예제
 
@@ -162,14 +227,15 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Python CLI + AI](./examples/python-cli-ai) | CLI 도구 AI 개발 |
 | [Chrome Extension + AI](./examples/chrome-extension-ai) | 크롬 확장 AI 개발 |
 | [Express.js + AI API](./examples/express-api-ai) | Express.js REST API AI 개발 |
+| [Go Microservice + AI](./examples/go-microservice-ai) | Go 마이크로서비스 AI 개발 |
+| [GraphQL + AI API](./examples/graphql-ai-api) | GraphQL API AI 개발 |
+| [React Native + AI](./examples/react-native-ai) | React Native 모바일 앱 AI 개발 |
+| [Terraform + AI IaC](./examples/terraform-ai-iac) | Terraform AI 인프라 자동화 |
+| [서브에이전트 병렬 개발](./examples/subagent-parallel-dev) | 서브에이전트 병렬 실행 예제 |
 | [Django API](./examples/django-api.md) | Django REST API 예제 |
 | [Go Microservice](./examples/go-microservice.md) | Go 마이크로서비스 예제 |
 | [Rust API](./examples/rust-api.md) | Rust API 예제 |
 | [Next.js SaaS](./examples/nextjs-saas.md) | SaaS 보일러플레이트 |
-| [Terraform + AI IaC](./examples/terraform-ai-iac) | Terraform AI 인프라 자동화 |
-| [Go Microservice + AI](./examples/go-microservice-ai) | Go 마이크로서비스 AI 개발 |
-| [React Native + AI](./examples/react-native-ai) | React Native 모바일 앱 AI 개발 |
-| [GraphQL + AI API](./examples/graphql-ai-api) | GraphQL API AI 개발 |
 | [CLAUDE.md 작성법](./examples/user-claudemd.md) | 사용자 CLAUDE.md 가이드 |
 
 ## 워크플로
@@ -182,15 +248,17 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [GitHub Actions AI 리뷰](./workflows/github-actions-ai-review.md) | PR 자동 리뷰 워크플로 |
 | [모노레포 AI 워크플로](./workflows/monorepo-ai-workflow.md) | 모노레포 AI 개발 패턴 |
 | [AI 에이전트 감독](./workflows/ai-agent-supervision.md) | AI 에이전트 태스크 위임 & 검수 |
+| [AI 에이전트 파이프라인](./workflows/ai-agent-pipeline.md) | 멀티 에이전트 코드-테스트-배포 파이프라인 |
 | [AI 테스트 강화](./workflows/ai-test-augmentation.md) | AI로 테스트 스위트 강화 & CI 통합 |
 | [AI 세션 메모리 관리](./workflows/ai-session-memory-management.md) | AI 세션 간 컨텍스트 & 지식 관리 |
 | [AI DB 마이그레이션](./workflows/ai-database-migration.md) | AI와 안전한 DB 스키마 마이그레이션 |
 | [AI 기술 부채 해소](./workflows/ai-tech-debt-reduction.md) | AI로 기술 부채 식별 & 점진적 개선 |
-| [AI 에이전트 파이프라인](./workflows/ai-agent-pipeline.md) | 멀티 에이전트 코드→테스트→배포 파이프라인 |
+| [AI 변경로그 자동화](./workflows/ai-changelog-automation.md) | AI로 변경로그 자동 생성 & 관리 |
+| [AI 코드 품질 지표](./workflows/ai-code-quality-metrics.md) | AI 기반 코드 품질 메트릭 수집 & 모니터링 |
 
 ## 플레이북
 
-> 심화 주제별 단계 가이드 — [`/claude-code/playbooks`](./claude-code/playbooks)
+> 심화 주제별 단계 가이드 - [`/claude-code/playbooks`](./claude-code/playbooks)
 
 | 플레이북 | 설명 |
 |----------|------|
@@ -205,10 +273,12 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [코드베이스 온보딩](./claude-code/playbooks/15-codebase-onboarding.md) | AI와 레포 구조 파악 & 온보딩 |
 | [대규모 리팩토링](./claude-code/playbooks/16-large-scale-refactoring.md) | AI로 대규모 리팩토링 안전하게 수행 |
 | [프로토타이핑](./claude-code/playbooks/17-rapid-prototyping.md) | AI로 아이디어를 빠르게 프로토타입으로 |
+| [프론트엔드 컴포넌트](./claude-code/playbooks/18-frontend-component-ai.md) | AI로 프론트엔드 컴포넌트 설계 & 구현 |
+| [타입 마이그레이션](./claude-code/playbooks/19-type-migration.md) | AI로 타입 시스템 안전하게 마이그레이션 |
 
 ## 템플릿
 
-> 복사해서 바로 쓰는 설정 파일 — [`/templates`](./templates)
+> 복사해서 바로 쓰는 설정 파일 - [`/templates`](./templates)
 
 | 템플릿 | 설명 |
 |--------|------|
@@ -222,7 +292,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 
 ## 스킬
 
-> Claude Code에서 슬래시 명령으로 바로 사용 — 자세한 설치법은 [`/skills/README.md`](./skills/README.md)
+> Claude Code에서 슬래시 명령으로 바로 사용 - 자세한 설치법은 [`/skills/README.md`](./skills/README.md)
 
 | 스킬 | 명령어 | 설명 |
 |------|--------|------|
@@ -239,8 +309,8 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/skills/
 
 ## 이 레포는 어떻게 업데이트 되나요?
 
-- **상시** — 새로운 가이드와 치트시트, 패턴 등 추가
-- **Release** — ⭐ Star 누르면 새 콘텐츠 추가 시 알림
+- **상시** - 새로운 가이드와 치트시트, 패턴 등 추가
+- **Release** - ⭐ Star 누르면 새 콘텐츠 추가 시 알림
 
 ## 더 알아보기
 
@@ -258,6 +328,6 @@ curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/skills/
 
 이 레포의 콘텐츠는 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 라이선스로 제공됩니다.
 
-- **학습/참고 목적 사용** — 자유롭게 가능
-- **수정/재배포** — 출처 표기 + 동일 라이선스 적용 시 가능
-- **상업적 사용** — 불가
+- **학습/참고 목적 사용** - 자유롭게 가능
+- **수정/재배포** - 출처 표기 + 동일 라이선스 적용 시 가능
+- **상업적 사용** - 불가
