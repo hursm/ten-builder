@@ -114,6 +114,12 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | 21 | [팀 AI 도입](./guides/21-team-ai-adoption.md) | 팀 단위 AI 도구 도입 전략 |
 | 22 | [스펙 기반 AI 개발](./guides/22-spec-driven-ai-development.md) | 스펙 먼저 정의하고 AI에게 맡기기 |
 
+### 주제별 가이드
+
+| 가이드 | 설명 |
+|--------|------|
+| [PDF 구조화 & 카드 관리](./guides/pdf-card-management.md) | PDF를 마크다운으로 구조화하고 요약 카드를 관리하는 방법 |
+
 ## 에피소드별 코드
 
 | EP | 제목 | 코드 |
