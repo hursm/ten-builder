@@ -22,12 +22,12 @@ Claude Code, Gemini 등 AI를 실무에서 직접 써보고 검증한 내용을 
 
 ```mermaid
 flowchart TD
-    R["ten-builder"] --> G["guides/\n36개 단계별 가이드\n+ 주제별 가이드"]
-    R --> E["episodes/\n8개 영상 코드"]
-    R --> C["cheatsheets/\n24개 원페이저"]
-    R --> EX["examples/\n23개 실전 예제"]
-    R --> W["workflows/\n21개 자동화 워크플로"]
-    R --> P["claude-code/playbooks/\n22개 심화 플레이북"]
+    R["ten-builder"] --> G["guides/\n40개 단계별 가이드\n+ 주제별 가이드"]
+    R --> E["episodes/\n9개 영상 코드"]
+    R --> C["cheatsheets/\n25개 원페이저"]
+    R --> EX["examples/\n24개 실전 예제"]
+    R --> W["workflows/\n22개 자동화 워크플로"]
+    R --> P["claude-code/playbooks/\n23개 심화 플레이북"]
     R --> T["templates/\n설정 파일 & 스크립트"]
     R --> S["skills/\n3개 Claude Code 스킬"]
 
@@ -44,7 +44,7 @@ flowchart TD
 
 | 폴더 | 내용 | 난이도 |
 |------|------|--------|
-| [`/guides`](./guides) | 1~36 단계별 + 주제별 실전 가이드 | ⭐⭐⭐ |
+| [`/guides`](./guides) | 1~40 단계별 + 주제별 실전 가이드 | ⭐⭐⭐ |
 | [`/episodes`](./episodes) | 영상별 코드 & 스크립트 | ⭐⭐ |
 | [`/cheatsheets`](./cheatsheets) | 원페이저 치트시트 | ⭐ |
 | [`/examples`](./examples) | 프로젝트별 실전 예제 | ⭐⭐ |
@@ -188,6 +188,10 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | 34 | [벤치마크 해석](./guides/34-ai-benchmark-guide.md) | SWE-bench 등 벤치마크 올바르게 읽기 |
 | 35 | [에이전트 스캐폴딩 설계](./guides/35-ai-agent-scaffolding-design.md) | AI 에이전트 프레임워크 설계 |
 | 36 | [바이브 코딩 마스터](./guides/36-vibe-coding-mastery.md) | 자연어로 소프트웨어를 만드는 실전 패턴 |
+| 37 | [멀티모달 AI 코딩](./guides/37-multimodal-ai-coding.md) | 이미지/음성/영상 입력으로 AI 코딩 확장 |
+| 38 | [AI 코드 보안 거버넌스](./guides/38-ai-code-security-governance.md) | AI 생성 코드 보안 정책 & 거버넌스 |
+| 39 | [AI 코딩 워크스테이션](./guides/39-ai-coding-workstation.md) | AI 코딩에 최적화된 워크스테이션 구축 |
+| 40 | [멀티 에이전트 오케스트레이션](./guides/40-multi-agent-orchestration.md) | 멀티 에이전트 조율 & 협업 패턴 |
 
 ### 주제별 가이드
 
@@ -207,6 +211,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | EP06 | Claude Code Hooks | [`/episodes/EP06-claude-code-hooks`](./episodes/EP06-claude-code-hooks) |
 | EP07 | AI 자동화 봇 | [`/episodes/EP07-ai-automation-bot`](./episodes/EP07-ai-automation-bot) |
 | EP08 | OpenAI Codex 리뷰 | [`/episodes/EP08-openai-codex-review`](./episodes/EP08-openai-codex-review) |
+| EP09 | AI 코딩 거버넌스 실전 | [`/episodes/EP09-ai-coding-governance`](./episodes/EP09-ai-coding-governance) |
 
 ## 치트시트
 
@@ -237,6 +242,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Devin AI](./cheatsheets/devin-ai-cheatsheet.md) | Cognition Devin 2.0 AI 소프트웨어 엔지니어 |
 | [CLI 코딩 에이전트 비교](./cheatsheets/cli-coding-agents-comparison.md) | 터미널 기반 AI 코딩 에이전트 15종 비교 |
 | [AI 코드 리뷰 프롬프트](./cheatsheets/ai-code-review-prompt-cheatsheet.md) | 코드 리뷰 프롬프트 패턴 모음 |
+| [Claude Code 고급 패턴](./cheatsheets/claude-code-advanced-patterns.md) | Claude Code 고급 사용 패턴 & 팁 |
 | [Cursor AI](./cheatsheets/cursor-ai-cheatsheet.md) | Cursor AI IDE 핵심 기능 & 단축키 |
 | [GitHub Copilot](./cheatsheets/github-copilot-cheatsheet.md) | GitHub Copilot 필수 기능 & 활용 패턴 |
 
@@ -258,6 +264,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [Rust Axum + AI](./examples/rust-axum-ai) | Rust Axum REST API AI 개발 |
 | [MCP 에이전트 도구 키트](./examples/mcp-agent-toolkit) | MCP 서버 3종 조합 자동화 |
 | [AI 비용 모니터링](./examples/ai-cost-monitor) | AI 도구 비용 추적 CLI 대시보드 |
+| [AI 비용 대시보드](./examples/ai-cost-dashboard) | AI API 비용 추적 웹 대시보드 |
 | [Discord 봇 + AI](./examples/discord-bot-ai) | Discord 봇 AI 개발 |
 | [Slack 봇 + AI](./examples/slack-bot-ai) | Slack 봇 AI 개발 |
 | [CrewAI 멀티 에이전트](./examples/crewai-multi-agent) | CrewAI 멀티 에이전트 코딩 |
@@ -293,6 +300,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [AI 코드 리뷰 자동화](./workflows/ai-code-review-automation.md) | PR 자동 리뷰 파이프라인 구축 |
 | [AI 에이전트 설정 최적화](./workflows/ai-agent-config-optimization.md) | AI 에이전트 settings.json & 권한 최적화 |
 | [AI 모노레포 도구 체인](./workflows/ai-monorepo-toolchain.md) | Turborepo/Nx 모노레포 AI 자동화 |
+| [AI 코드 서플라이 체인 감사](./workflows/ai-code-supply-chain-audit.md) | AI 코드 공급망 보안 감사 자동화 |
 
 ## 플레이북
 
@@ -322,6 +330,7 @@ cd ten-builder/episodes/ep5-agent-teams-with-tmux
 | [접근성 검사](./claude-code/playbooks/26-ai-accessibility.md) | AI로 웹 접근성(a11y) 자동 검사 & 수정 |
 | [디자인 시스템 생성](./claude-code/playbooks/27-design-system-generation.md) | AI로 디자인 토큰부터 컴포넌트 라이브러리까지 |
 | [AI 페어 리뷰](./claude-code/playbooks/28-ai-pair-review.md) | 사람과 AI가 함께 코드 리뷰하기 |
+| [영속 메모리 구축](./claude-code/playbooks/29-persistent-memory.md) | AI 코딩 에이전트 영속 메모리 설계 & 구축 |
 
 ## 템플릿
 
